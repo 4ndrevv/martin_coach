@@ -13,4 +13,5 @@ extension Color {
     static let nav_bar_color = Color("nav_bar_color")
     static let bottom_sheet_background = Color("bottom_sheet_background")
     static let bottom_sheet_border_top = Color("bottom_sheet_border_top")
+    static let transparentColor = UIColor.clear
 }

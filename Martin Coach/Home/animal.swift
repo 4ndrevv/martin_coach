@@ -10,8 +10,8 @@ import SwiftUI
 import BottomSheet
 
 enum BottomSheetPosition : CGFloat, CaseIterable {
-    case top = 0.83
-    case middle = 0.385
+    case top = 0.94
+    case middle = 0.1
 }
 
 struct animal: View {
@@ -52,6 +52,7 @@ struct animal: View {
                                .font(.system(size: 15))
                                .font(.headline)
                                .fontWeight(.semibold)
+                           
                        }
                        .padding(.bottom, 19.0)
                         }

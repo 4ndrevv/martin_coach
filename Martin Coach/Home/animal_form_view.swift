@@ -12,7 +12,7 @@ struct animal_form_view: View {
     var body: some View {
         ScrollView{
         }
-        .background(Color.bottom_sheet_background)
+        .background(Color(uiColor: UIColor.clear))
         .background(.ultraThinMaterial)
         .clipShape(RoundedRectangle(cornerRadius: 44))
         .overlay {

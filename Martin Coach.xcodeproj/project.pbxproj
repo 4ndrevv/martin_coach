@@ -18,6 +18,13 @@
 		CD22F68D2A45D07600FA754F /* BottomSheet in Frameworks */ = {isa = PBXBuildFile; productRef = CD22F68C2A45D07600FA754F /* BottomSheet */; };
 		CD22F68F2A45D32E00FA754F /* animal_form_view.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22F68E2A45D32E00FA754F /* animal_form_view.swift */; };
 		CD22F6962A45E18F00FA754F /* blur.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD22F6952A45E18F00FA754F /* blur.swift */; };
+		CD4A90012A57015E003A5C85 /* tab_bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A90002A57015E003A5C85 /* tab_bar.swift */; };
+		CD4A90032A574BDF003A5C85 /* animal_repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD4A90022A574BDF003A5C85 /* animal_repos.swift */; };
+		CD8556A72A54253200E992AD /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8556A62A54253200E992AD /* Home.swift */; };
+		CD8556A92A542A6A00E992AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8556A82A542A6A00E992AD /* HomeView.swift */; };
+		CD8556AD2A5448B900E992AD /* Scroll_home_detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8556AC2A5448B900E992AD /* Scroll_home_detector.swift */; };
+		CD8556AF2A549F0700E992AD /* animal_activity_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8556AE2A549F0700E992AD /* animal_activity_2.swift */; };
+		CD8556B12A54A88300E992AD /* animal_food_2.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8556B02A54A88300E992AD /* animal_food_2.swift */; };
 		CDAB343A2A447DC80098C50E /* nav_bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDAB34392A447DC80098C50E /* nav_bar.swift */; };
 		CDBE4F0B2A39C95D009223BA /* animal_list.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE4F0A2A39C95D009223BA /* animal_list.swift */; };
 		CDBE4F112A3B1142009223BA /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBE4F102A3B1142009223BA /* user.swift */; };
@@ -44,6 +51,13 @@
 		CD22F6892A45CA0900FA754F /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
 		CD22F68E2A45D32E00FA754F /* animal_form_view.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_form_view.swift; sourceTree = "<group>"; };
 		CD22F6952A45E18F00FA754F /* blur.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = blur.swift; sourceTree = "<group>"; };
+		CD4A90002A57015E003A5C85 /* tab_bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab_bar.swift; sourceTree = "<group>"; };
+		CD4A90022A574BDF003A5C85 /* animal_repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_repos.swift; sourceTree = "<group>"; };
+		CD8556A62A54253200E992AD /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		CD8556A82A542A6A00E992AD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CD8556AC2A5448B900E992AD /* Scroll_home_detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroll_home_detector.swift; sourceTree = "<group>"; };
+		CD8556AE2A549F0700E992AD /* animal_activity_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_activity_2.swift; sourceTree = "<group>"; };
+		CD8556B02A54A88300E992AD /* animal_food_2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_food_2.swift; sourceTree = "<group>"; };
 		CDAB34392A447DC80098C50E /* nav_bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nav_bar.swift; sourceTree = "<group>"; };
 		CDBE4F0A2A39C95D009223BA /* animal_list.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_list.swift; sourceTree = "<group>"; };
 		CDBE4F102A3B1142009223BA /* user.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = user.swift; sourceTree = "<group>"; };
@@ -88,6 +102,7 @@
 		53C6AFD72A389ADC00BC1B71 /* Martin Coach */ = {
 			isa = PBXGroup;
 			children = (
+				CD8556A52A5424E700E992AD /* Check_code */,
 				CD22F6902A45DA8E00FA754F /* Components */,
 				CDAB34382A447D720098C50E /* navigation */,
 				CDD032092A4444DE00CF997D /* Utils */,
@@ -123,10 +138,21 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		CD8556A52A5424E700E992AD /* Check_code */ = {
+			isa = PBXGroup;
+			children = (
+				CD8556A62A54253200E992AD /* Home.swift */,
+				CD8556A82A542A6A00E992AD /* HomeView.swift */,
+				CD8556AC2A5448B900E992AD /* Scroll_home_detector.swift */,
+			);
+			path = Check_code;
+			sourceTree = "<group>";
+		};
 		CDAB34382A447D720098C50E /* navigation */ = {
 			isa = PBXGroup;
 			children = (
 				CDAB34392A447DC80098C50E /* nav_bar.swift */,
+				CD4A90002A57015E003A5C85 /* tab_bar.swift */,
 			);
 			path = navigation;
 			sourceTree = "<group>";
@@ -158,6 +184,9 @@
 				CDD031FD2A41D13400CF997D /* animal_food.swift */,
 				CDD031F82A41A5E400CF997D /* animal_tab.swift */,
 				CD22F68E2A45D32E00FA754F /* animal_form_view.swift */,
+				CD8556AE2A549F0700E992AD /* animal_activity_2.swift */,
+				CD8556B02A54A88300E992AD /* animal_food_2.swift */,
+				CD4A90022A574BDF003A5C85 /* animal_repos.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -249,11 +278,18 @@
 				CDBE4F112A3B1142009223BA /* user.swift in Sources */,
 				CDAB343A2A447DC80098C50E /* nav_bar.swift in Sources */,
 				CDD032022A41EB1500CF997D /* animal_add.swift in Sources */,
+				CD8556AF2A549F0700E992AD /* animal_activity_2.swift in Sources */,
+				CD8556A72A54253200E992AD /* Home.swift in Sources */,
+				CD8556AD2A5448B900E992AD /* Scroll_home_detector.swift in Sources */,
 				CDD0320B2A4446E800CF997D /* extensions.swift in Sources */,
 				CD22F6962A45E18F00FA754F /* blur.swift in Sources */,
 				53C6AFDD2A389ADC00BC1B71 /* ContentView.swift in Sources */,
+				CD8556A92A542A6A00E992AD /* HomeView.swift in Sources */,
+				CD4A90032A574BDF003A5C85 /* animal_repos.swift in Sources */,
 				CDD0320D2A4447F200CF997D /* home_view.swift in Sources */,
 				CD22F68A2A45CA0900FA754F /* Shapes.swift in Sources */,
+				CD8556B12A54A88300E992AD /* animal_food_2.swift in Sources */,
+				CD4A90012A57015E003A5C85 /* tab_bar.swift in Sources */,
 				CDD031FE2A41D13400CF997D /* animal_food.swift in Sources */,
 				CDD032062A4332E700CF997D /* sign_up.swift in Sources */,
 				CDD031FC2A41D08F00CF997D /* animal_activity.swift in Sources */,
