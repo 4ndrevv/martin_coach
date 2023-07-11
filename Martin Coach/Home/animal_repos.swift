@@ -40,6 +40,10 @@ struct animal_repos: View {
                 .offset(x: -60, y: 0)
                     
                 }
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.white.shadow(.drop(radius: 2)))
+                }
                            
                        }
         }

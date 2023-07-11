@@ -40,6 +40,10 @@ struct animal_food_2: View {
                 .offset(x: -60, y: 0)
                     
                 }
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.white.shadow(.drop(radius: 2)))
+                }
                            
                        }
         }

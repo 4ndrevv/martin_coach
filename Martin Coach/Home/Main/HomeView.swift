@@ -16,7 +16,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.background
+                Color.white
                 .edgesIgnoringSafeArea(.all)
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack(spacing: 35) {
@@ -25,22 +25,21 @@ struct HomeView: View {
                             .zIndex(1000)
                         Text("Vendredi 10 Juin 2023")
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.system(size: 27))
-                            .fontWeight(.bold)
-                            .padding(.leading, 16.0)
-                            .padding(.bottom, -8)
+                            .font(.system(size: 15))
                         
-                        NavigationLink(destination: Text("tab activity")){
+                            .padding(.leading, 16.0)
+                        
+                        NavigationLink(destination: animal_activity_detail()){
                             animal_activity_2()
                         }
                         .buttonStyle(PlainButtonStyle())
                         
-                        NavigationLink(destination: animal()){
+                        NavigationLink(destination: animal_repos_detail()){
                             animal_repos()
                         }
                         .buttonStyle(PlainButtonStyle())
                         
-                        NavigationLink(destination: Text("tab food")){
+                        NavigationLink(destination: animal_food_detail()){
                             animal_food_2()
                         }
                         .buttonStyle(PlainButtonStyle())

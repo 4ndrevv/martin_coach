@@ -62,8 +62,14 @@ struct animal_activity_2: View {
                                 }
                                 VStack(alignment: .leading, spacing: 2){
                                     Text("2h")
+                                        .foregroundColor(Color.red)
+                                        .fontWeight(.bold)
                                     Text("3h")
+                                        .foregroundColor(Color.green)
+                                        .fontWeight(.bold)
                                     Text("2h")
+                                        .foregroundColor(Color.yellow)
+                                        .fontWeight(.bold)
                                 }
                             }
                             
@@ -86,6 +92,10 @@ struct animal_activity_2: View {
                         }
                     }
             }
+                .background {
+                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        .fill(.white.shadow(.drop(radius: 2)))
+                }
         }
     }
 }
