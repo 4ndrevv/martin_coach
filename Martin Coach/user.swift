@@ -22,7 +22,7 @@ struct user: View {
                                                         .cornerRadius(100)
                                                                     
                                                 )
-                                        Text("Pierre JEANJEAN")
+                                        Text("Pierre JEANJEAN haha")
                                             .font(.title)
                                             .fontWeight(.heavy)
                                     }
