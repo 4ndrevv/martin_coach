@@ -64,7 +64,7 @@ struct animal: View {
                     }
                 
                     //nav bar
-                    nav_bar(action: {})
+                    //nav_bar(action: {})
                     }
             .navigationBarHidden(true)
         }

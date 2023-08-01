@@ -8,35 +8,32 @@
 
 import SwiftUI
 
-struct chart: View {
+struct all_chart: View {
     
     @State var currentWeek: [Date] = []
     @State var currentDay: Date = Date()
     
     var body: some View {
         VStack(spacing: 20) {
-            
             Text("Activity")
                 .font(.title)
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            graph()
-            
-            Spacer()
-            Spacer()
+            graph_activity()
+            Text("Repos")
+                .font(.title)
+                .fontWeight(.bold)
+                .frame(maxWidth: .infinity, alignment: .leading)
+            InfiniteScrollChart()
+                        .padding(.horizontal, 4)
+                        .environment(\.locale, .init(identifier: "en_US"))
             
             Text("Progress")
                 .font(.title)
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
-            
-            
             //Mark : Activity Ring view
             activity_ring_card()
-            
-            Spacer()
-            Spacer()
-            
             
             HStack {
                 Text("Activity recent")
@@ -56,7 +53,7 @@ struct chart: View {
             
             
             //Mark: Current week view
-            HStack(spacing: 10) {
+            HStack(spacing: -5) {
                 ForEach(currentWeek, id: \.self) {date in
                     Text(extracDate(date: date))
                         .fontWeight(isSameDay(date1: currentDay, date2: date) ? .bold : .semibold)
@@ -123,8 +120,8 @@ struct chart: View {
     }
 }
 
-struct chart_Previews: PreviewProvider {
+struct all_chart_Previews: PreviewProvider {
     static var previews: some View {
-        animal_activity_detail()
+        animal_activity_repos_detail()
     }
 }

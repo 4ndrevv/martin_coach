@@ -41,8 +41,8 @@ struct animal_repos: View {
                     
                 }
                 .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(.white.shadow(.drop(radius: 2)))
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .fill(.white.shadow(.drop(radius: 20)))
                 }
                            
                        }

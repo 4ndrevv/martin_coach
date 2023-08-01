@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ring_circle_2: View {
-    @State var sampleAnalytics: [graph_struct] = sample_analytics
+    @State var sampleAnalytics: [graph_struct_activity] = sample_analytics
     
     @State var currentTab: String = "Day"
     var body: some View {

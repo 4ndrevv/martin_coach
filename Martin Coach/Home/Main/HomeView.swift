@@ -16,33 +16,41 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.white
-                .edgesIgnoringSafeArea(.all)
+                Color.yellow.opacity(0.2)
+                    .edgesIgnoringSafeArea(.all)
                 ScrollView(.vertical, showsIndicators: false) {
+                    HeaderView()
+                    ///making to top
+                        .zIndex(1000)
+                    animal_martin_coach()
+                        .scaleEffect(0.7)
                     VStack(spacing: 35) {
-                        HeaderView()
-                        ///making to top
-                            .zIndex(1000)
-                        Text("Vendredi 10 Juin 2023")
+                        Text("Activity")
+                            .font(.system(size: 27))
+                            .fontWeight(.bold)
+                            .padding(.leading, 6.0)
+                            .padding(.bottom, -8)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .font(.system(size: 15))
+                            .padding(.leading, 16.0)
+                        NavigationLink(destination: animal_activity_repos_detail()){
+                            animal_activity_repos()
+                        }
+                        .buttonStyle(PlainButtonStyle())
+                        
+                        Text("Food")
+                            .font(.system(size: 27))
+                            .fontWeight(.bold)
+                            .padding(.leading, 6.0)
+                            .padding(.bottom, -8)
+                            .frame(maxWidth: .infinity, alignment: .leading)
                         
                             .padding(.leading, 16.0)
                         
-                        NavigationLink(destination: animal_activity_detail()){
-                            animal_activity_2()
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        
-                        NavigationLink(destination: animal_repos_detail()){
-                            animal_repos()
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                        
                         NavigationLink(destination: animal_food_detail()){
-                            animal_food_2()
+                            animal_food()
                         }
                         .buttonStyle(PlainButtonStyle())
+                        .padding(.bottom, 70)
                        
                     }
                     .background {
@@ -53,17 +61,16 @@ struct HomeView: View {
                         }
                     }
                 }
+                .frame(maxWidth: .infinity)
             }
             
             
         }
-        
-        
     }
     
     @ViewBuilder
     func HeaderView() -> some View {
-        let headerHeight = (size.height * 0.3) + safeArea.top
+        let headerHeight = (size.height * 0.2) + safeArea.top
         let minimumHeaderHeight = 95 + safeArea.top
         ///converting offset into progress
         ///limiting it to 0 - 1
@@ -87,9 +94,9 @@ struct HomeView: View {
                              .clipShape(Circle())
                              .frame(width: rect.width, height: rect.height)
                              ///Scaling item
-                             .scaleEffect(1 - (progress * 0.7), anchor: .center)
+                             .scaleEffect(1 - (progress * 0.5), anchor: .center)
                              ///Moving scale effect
-                             .offset(x: progress, y: -resizedOffsetY * progress)
+                             .offset(x: progress, y: -resizedOffsetY * progress-15)
                         
                     }
                     .frame(width: headerHeight * 0.5, height: headerHeight * 0.5)
@@ -98,7 +105,7 @@ struct HomeView: View {
                         .font(.title)
                         .foregroundColor(.black)
                         .bold()
-                        .scaleEffect(1 - (progress * 0.4), anchor: .center)
+                        .scaleEffect(1 - (progress * 1), anchor: .center)
                 }
                 .padding(.top, safeArea.top)
                 .padding(.bottom, 15)

@@ -8,19 +8,14 @@
 
 import SwiftUI
 
-struct animal_food_2: View {
+struct animal_food: View {
     var body: some View {
-            VStack(alignment: .leading){
-                Text("Food")
-                    .font(.system(size: 27))
-                    .fontWeight(.bold)
-                    .padding(.leading, 6.0)
-                    .padding(.bottom, -1)
-                ZStack{
+            
+              ZStack{
                     Rectangle()
                         .foregroundColor(Color.white)
                         .frame(width: 370, height: 140)
-                        .cornerRadius(10)
+                        .cornerRadius(20)
                     Image("gamelle")
                         .resizable()
                         .frame(width: 114, height: 100)
@@ -41,17 +36,17 @@ struct animal_food_2: View {
                     
                 }
                 .background {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
-                        .fill(.white.shadow(.drop(radius: 2)))
+                    RoundedRectangle(cornerRadius: 20, style: .continuous)
+                        .fill(.white.shadow(.drop(radius: 20)))
                 }
                            
-                       }
+                       
         }
         
 }
 
-struct animal_food_2_Previews: PreviewProvider {
+struct animal_food_Previews: PreviewProvider {
     static var previews: some View {
-        animal_food_2()
+        animal_food()
     }
 }

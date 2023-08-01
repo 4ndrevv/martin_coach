@@ -9,9 +9,9 @@
 import SwiftUI
 import Charts
 
-struct graph: View {
+struct graph_activity: View {
     //Mark : Sate Chart Data for animation changes
-    @State var sampleAnalytics: [graph_struct] = sample_analytics
+    @State var sampleAnalytics: [graph_struct_activity] = sample_analytics
     // Mark : View Properties
     @State var currentTab: String = "Day"
     var body: some View {
@@ -96,9 +96,9 @@ struct graph: View {
     }
 }
 
-struct graph_Previews: PreviewProvider {
+struct graph_activity_Previews: PreviewProvider {
     static var previews: some View {
-        graph()
+        graph_activity()
     }
 }
 

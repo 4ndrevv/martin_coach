@@ -8,18 +8,18 @@
 
 import SwiftUI
 
-struct animal_activity_detail: View {
+struct animal_activity_repos_detail: View {
     var body: some View {
         ScrollView (.vertical, showsIndicators: false) {
-            chart()
+            all_chart()
         }
         .frame(maxWidth : .infinity)
         }
     
     }
 
-struct animal_activity_detail_Previews: PreviewProvider {
+struct animal_activity_repos_detail_Previews: PreviewProvider {
     static var previews: some View {
-        animal_activity_detail()
+        animal_activity_repos_detail()
     }
 }

@@ -24,7 +24,7 @@ struct animal_list: View {
                             animal_tab()
                             }
                             .fullScreenCover(isPresented: $showModal_animal) {
-                                                animal()
+                                                Home()
                             }
                         
                     }
