@@ -10,48 +10,35 @@ import SwiftUI
 
 struct activity_ring_card: View {
     var body: some View {
-        VStack(spacing: 1) {
-            Text("Time")
-                .fontWeight(.semibold)
-                .frame(maxWidth: .infinity, alignment: .leading)
-            Text("7h")
-                .font(.system(size: 45, weight: .bold))
-                .frame(maxWidth: .infinity, alignment: .leading)
-            HStack() {
-                VStack(alignment: .leading, spacing: 12){
+        HStack(spacing: 70){
+            VStack(alignment: .leading, spacing: 1) {
+                Text("Time")
+                    .fontWeight(.semibold)
+                    .frame( alignment: .leading)
+                Text("7h")
+                    .font(.system(size: 45, weight: .bold))
+                    .frame(alignment: .leading)
+                VStack(alignment: .leading, spacing: 10){
                     ForEach(rings) { ring in
-                        Label {
-                            HStack(alignment: .bottom, spacing: 5){
+                            HStack(alignment: .center, spacing: 5){
                                 Text("\(Int(ring.progress))%")
-                                    .font(.title3.bold())
+                                    .font(.system(size: 20))
+                                    .foregroundColor(ring.keyColor)
+                                    .bold()
                                 Text(ring.value)
                                     .font(.caption)
+                                    .bold()
                             }
-                        } icon : {
-                            
-                            Group{
-                                if ring.isText{
-                                    Circle()
-                                        .frame(width:10, height: 10)
-                                        .foregroundColor(ring.keyColor)
-                                }else{
-                                    Circle()
-                                        .frame(width:10, height: 10)
-                                        .foregroundColor(ring.keyColor)
-                                }
-                            }
-                        }
-                    }
+
                 }
-                Spacer()
-                //progess ring
-                ring_circle()
-                    .padding(.leading, 10)
             }
-            .padding(.top, 20)
+                
+            }
+            
+            .padding(.vertical, 15)
+            ring_circle()
         }
-        .padding(.horizontal, 20)
-        .padding(.vertical, 15)
+        .frame(maxWidth: .infinity)
         .background {
             RoundedRectangle( cornerRadius: 10, style: .continuous)
                 .fill(.white.shadow(.drop(radius: 2)))

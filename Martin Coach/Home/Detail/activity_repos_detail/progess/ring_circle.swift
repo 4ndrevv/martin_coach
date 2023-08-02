@@ -10,29 +10,32 @@ import SwiftUI
 
 struct ring_circle: View {
     var body: some View {
-        var totalProgress: Double = 0
         ZStack {
             ForEach(rings.indices, id: \.self) { index in
-                totalProgress += rings[index].progress
-                for i in 0...index {
-                    totalProgress += rings[i].progress}
+                var totalProgress: Double {
+                    var progressSum: Double = 0
+                    for index in 0..<index {
+                        progressSum = progressSum + rings[index].progress
+                    }
+                    return progressSum
+                }
                 ZStack {
                     Circle()
-                        .stroke(.gray.opacity(0.3), lineWidth: 10)
+                        .stroke(.gray.opacity(0.2), lineWidth: 25)
                     
                     if index != 0 { // Handle first ring differently since there's no previous ring
                         Circle()
-                            .trim(from: totalProgress / 100, to: (totalProgress + rings[index].progress) / 100)
-                            .stroke(rings[index].keyColor, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
+                            .trim(from: totalProgress / 100, to: (totalProgress + rings[index].progress - 0.2) / 100)
+                            .stroke(rings[index].keyColor, style: StrokeStyle(lineWidth: 25, lineCap: .butt, lineJoin: .round))
                             .rotationEffect(.init(degrees: -90))
                     } else { // For the first ring, just show its progress independently
                         Circle()
-                            .trim(from: 0, to: totalProgress / 100)
-                            .stroke(rings[index].keyColor, style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round))
+                            .trim(from: 0, to: (rings[index].progress - 0.2) / 100)
+                            .stroke(rings[index].keyColor, style: StrokeStyle(lineWidth: 25, lineCap: .butt, lineJoin: .round))
                             .rotationEffect(.init(degrees: -90))
                     }
                 }
-                .padding(CGFloat(index) * 14)
+                .padding(CGFloat(index) * 0)
             }
             .frame(width: 130, height: 130)
         }

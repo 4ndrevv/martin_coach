@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3D09AC1B2A7267360057DD52 /* graph_struct_repos_mini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09AC1A2A7267360057DD52 /* graph_struct_repos_mini.swift */; };
+		3D09AC1B2A7267360057DD52 /* graph_struct_repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09AC1A2A7267360057DD52 /* graph_struct_repos.swift */; };
 		3D09AC1D2A7277610057DD52 /* check_and_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09AC1C2A7277610057DD52 /* check_and_test.swift */; };
 		3D36F3592A6FC37D00F043EE /* animal_activity_repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36F3582A6FC37D00F043EE /* animal_activity_repos.swift */; };
 		3D36F35C2A6FD4D200F043EE /* animal_martin_coach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36F35B2A6FD4D200F043EE /* animal_martin_coach.swift */; };
-		3D36F3642A700C3600F043EE /* graph_struct_repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36F3632A700C3600F043EE /* graph_struct_repos.swift */; };
 		3D36F3662A700C5300F043EE /* graph_repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36F3652A700C5300F043EE /* graph_repos.swift */; };
 		3D36F3682A70192700F043EE /* graph_repos_mini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36F3672A70192700F043EE /* graph_repos_mini.swift */; };
+		3DCE24552A7AA6930097DBCF /* animal_icon_circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCE24542A7AA6930097DBCF /* animal_icon_circle.swift */; };
+		3DF215A72A7A6894006F1FAA /* tab_bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF215A62A7A6894006F1FAA /* tab_bar.swift */; };
 		53C6AFD92A389ADC00BC1B71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6AFD82A389ADC00BC1B71 /* AppDelegate.swift */; };
 		53C6AFDB2A389ADC00BC1B71 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6AFDA2A389ADC00BC1B71 /* SceneDelegate.swift */; };
 		53C6AFDD2A389ADC00BC1B71 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6AFDC2A389ADC00BC1B71 /* ContentView.swift */; };
@@ -48,13 +49,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3D09AC1A2A7267360057DD52 /* graph_struct_repos_mini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph_struct_repos_mini.swift; sourceTree = "<group>"; };
+		3D09AC1A2A7267360057DD52 /* graph_struct_repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph_struct_repos.swift; sourceTree = "<group>"; };
 		3D09AC1C2A7277610057DD52 /* check_and_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = check_and_test.swift; path = "Martin Coach/Home/Detail/activity_repos_detail/activity_repos_chart/check_and_test.swift"; sourceTree = SOURCE_ROOT; };
 		3D36F3582A6FC37D00F043EE /* animal_activity_repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_activity_repos.swift; sourceTree = "<group>"; };
 		3D36F35B2A6FD4D200F043EE /* animal_martin_coach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_martin_coach.swift; sourceTree = "<group>"; };
-		3D36F3632A700C3600F043EE /* graph_struct_repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph_struct_repos.swift; sourceTree = "<group>"; };
 		3D36F3652A700C5300F043EE /* graph_repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph_repos.swift; sourceTree = "<group>"; };
 		3D36F3672A70192700F043EE /* graph_repos_mini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph_repos_mini.swift; sourceTree = "<group>"; };
+		3DCE24542A7AA6930097DBCF /* animal_icon_circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_icon_circle.swift; sourceTree = "<group>"; };
+		3DF215A62A7A6894006F1FAA /* tab_bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab_bar.swift; sourceTree = "<group>"; };
 		53C6AFD52A389ADC00BC1B71 /* Martin Coach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Martin Coach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53C6AFD82A389ADC00BC1B71 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		53C6AFDA2A389ADC00BC1B71 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		3D36F35D2A6FFFEC00F043EE /* Tab_bar */ = {
 			isa = PBXGroup;
 			children = (
+				3DF215A62A7A6894006F1FAA /* tab_bar.swift */,
 			);
 			path = Tab_bar;
 			sourceTree = "<group>";
@@ -132,7 +135,7 @@
 				CD8556A52A5424E700E992AD /* Check_code */,
 				CD22F6902A45DA8E00FA754F /* Components */,
 				CDD032092A4444DE00CF997D /* Utils */,
-				CDD032082A4444BB00CF997D /* Main */,
+				CDD032082A4444BB00CF997D /* Main-Run */,
 				53C6AFD82A389ADC00BC1B71 /* AppDelegate.swift */,
 				53C6AFDA2A389ADC00BC1B71 /* SceneDelegate.swift */,
 				CDD0320E2A44483500CF997D /* Home */,
@@ -169,14 +172,14 @@
 			path = Check_code;
 			sourceTree = "<group>";
 		};
-		CDBC06362A581BAD00B338C4 /* Main */ = {
+		CDBC06362A581BAD00B338C4 /* Main-View */ = {
 			isa = PBXGroup;
 			children = (
 				CD8556A62A54253200E992AD /* Home.swift */,
 				CD8556A82A542A6A00E992AD /* HomeView.swift */,
 				CD8556AC2A5448B900E992AD /* Scroll_home_detector.swift */,
 			);
-			path = Main;
+			path = "Main-View";
 			sourceTree = "<group>";
 		};
 		CDBC06372A581BC500B338C4 /* Detail */ = {
@@ -222,9 +225,8 @@
 			children = (
 				CDBC064D2A5BFC9800B338C4 /* graph_struct_activity.swift */,
 				CDBC06512A5C027A00B338C4 /* graph_activity.swift */,
-				3D36F3632A700C3600F043EE /* graph_struct_repos.swift */,
 				3D36F3652A700C5300F043EE /* graph_repos.swift */,
-				3D09AC1A2A7267360057DD52 /* graph_struct_repos_mini.swift */,
+				3D09AC1A2A7267360057DD52 /* graph_struct_repos.swift */,
 				3D36F3672A70192700F043EE /* graph_repos_mini.swift */,
 			);
 			path = activity_repos_chart;
@@ -249,12 +251,12 @@
 			path = activity_repos_recent;
 			sourceTree = "<group>";
 		};
-		CDD032082A4444BB00CF997D /* Main */ = {
+		CDD032082A4444BB00CF997D /* Main-Run */ = {
 			isa = PBXGroup;
 			children = (
 				53C6AFDC2A389ADC00BC1B71 /* ContentView.swift */,
 			);
-			path = Main;
+			path = "Main-Run";
 			sourceTree = "<group>";
 		};
 		CDD032092A4444DE00CF997D /* Utils */ = {
@@ -270,7 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				CDBC06372A581BC500B338C4 /* Detail */,
-				CDBC06362A581BAD00B338C4 /* Main */,
+				CDBC06362A581BAD00B338C4 /* Main-View */,
 				CDD032012A41EB1500CF997D /* animal_add.swift */,
 				CDD031F82A41A5E400CF997D /* animal_tab.swift */,
 				CD22F68E2A45D32E00FA754F /* animal_form_view.swift */,
@@ -278,6 +280,7 @@
 				CD8556B02A54A88300E992AD /* animal_food.swift */,
 				3D36F3582A6FC37D00F043EE /* animal_activity_repos.swift */,
 				3D36F35B2A6FD4D200F043EE /* animal_martin_coach.swift */,
+				3DCE24542A7AA6930097DBCF /* animal_icon_circle.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -360,6 +363,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DCE24552A7AA6930097DBCF /* animal_icon_circle.swift in Sources */,
 				CDD031F92A41A5E400CF997D /* animal_tab.swift in Sources */,
 				53C6AFD92A389ADC00BC1B71 /* AppDelegate.swift in Sources */,
 				CDBC064E2A5BFC9800B338C4 /* graph_struct_activity.swift in Sources */,
@@ -383,10 +387,10 @@
 				CDBC06342A581B7100B338C4 /* animal_food_detail.swift in Sources */,
 				CDD0320B2A4446E800CF997D /* extensions.swift in Sources */,
 				CD22F6962A45E18F00FA754F /* blur.swift in Sources */,
-				3D36F3642A700C3600F043EE /* graph_struct_repos.swift in Sources */,
+				3DF215A72A7A6894006F1FAA /* tab_bar.swift in Sources */,
 				3D36F3682A70192700F043EE /* graph_repos_mini.swift in Sources */,
 				CDC377A02A5C1DC200898E66 /* progress_struct.swift in Sources */,
-				3D09AC1B2A7267360057DD52 /* graph_struct_repos_mini.swift in Sources */,
+				3D09AC1B2A7267360057DD52 /* graph_struct_repos.swift in Sources */,
 				53C6AFDD2A389ADC00BC1B71 /* ContentView.swift in Sources */,
 				CD8556A92A542A6A00E992AD /* HomeView.swift in Sources */,
 				CDC377A22A5C235300898E66 /* progess_tab.swift in Sources */,
@@ -531,6 +535,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Martin Coach/Preview Content\"";
 				DEVELOPMENT_TEAM = B4H64333YH;
@@ -552,6 +557,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Martin Coach/Preview Content\"";
 				DEVELOPMENT_TEAM = B4H64333YH;

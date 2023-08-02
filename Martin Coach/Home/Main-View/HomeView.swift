@@ -16,7 +16,7 @@ struct HomeView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                Color.yellow.opacity(0.2)
+                Color.yellow.opacity(0.8)
                     .edgesIgnoringSafeArea(.all)
                 ScrollView(.vertical, showsIndicators: false) {
                     HeaderView()
@@ -71,7 +71,7 @@ struct HomeView: View {
     @ViewBuilder
     func HeaderView() -> some View {
         let headerHeight = (size.height * 0.2) + safeArea.top
-        let minimumHeaderHeight = 95 + safeArea.top
+        let minimumHeaderHeight = 65 + safeArea.top
         ///converting offset into progress
         ///limiting it to 0 - 1
         let progress = max(min(-offsetY / (headerHeight - minimumHeaderHeight), 1), 0)
@@ -86,22 +86,20 @@ struct HomeView: View {
                         ///Since Scalling of the image is 0.3 (1-0.7)
                         let halfScaledHeight = ( rect.height * 0.3) * 0.5
                         let bottomPadding: CGFloat = 15
-                        let resizedOffsetY = (-(minimumHeaderHeight - halfScaledHeight - bottomPadding)) + 50
+                        let resizedOffsetY = (-(minimumHeaderHeight - halfScaledHeight - bottomPadding))
                         
-                        Image("chat_photo")
-                             .resizable()
-                             .aspectRatio(contentMode: .fill)
-                             .clipShape(Circle())
+                        animal_icon_circle()
                              .frame(width: rect.width, height: rect.height)
                              ///Scaling item
                              .scaleEffect(1 - (progress * 0.5), anchor: .center)
                              ///Moving scale effect
-                             .offset(x: progress, y: -resizedOffsetY * progress-15)
+                             .offset(x: progress, y: -resizedOffsetY * progress+40)
                         
                     }
                     .frame(width: headerHeight * 0.5, height: headerHeight * 0.5)
                     
                     Text("Olivie")
+                        .padding(.top, 50)
                         .font(.title)
                         .foregroundColor(.black)
                         .bold()
@@ -114,6 +112,7 @@ struct HomeView: View {
             .frame(height: (headerHeight + offsetY) < minimumHeaderHeight ? minimumHeaderHeight : (headerHeight + offsetY), alignment: .bottom)
             ///sticking to the top
             .offset(y: -offsetY)
+            .shadow(color: Color.black.opacity(0.4), radius: 5, x: 0, y: 5)
         }
         .frame(height: headerHeight)
         

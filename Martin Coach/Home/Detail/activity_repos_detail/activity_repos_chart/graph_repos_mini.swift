@@ -6,77 +6,8 @@
 //
 import SwiftUI
 import Charts
-struct YAxisWidthPreferenceyKey: PreferenceKey {
-static var defaultValue: CGFloat = .zero
-static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
-        value = max(value, nextValue())
-    }
-}
-struct YAxisWidthModifier: ViewModifier {
-func body(content: Content) -> some View {
-        content.background(
-            GeometryReader { geometry in
-                Color.clear.preference(key: YAxisWidthPreferenceyKey.self, value: geometry.size.width)
-            }
-        )
-    }
-}
-struct BarChart: View {
-@Binding var unitOffset: Int
-@State var upperBound: Double?
-@State var data_base: [graph_struct_repos_test] = sample_analytics_test
-init(unitOffset: Binding<Int>) {
-self._unitOffset = unitOffset
-    }
-private let calendar: Calendar = {
-        Calendar.init(identifier: .gregorian)
-    }()
-    private var initDate: Date {
-        calendar.startOfDay(for: Date().addingTimeInterval(TimeInterval(unitOffset * 24 * 3600)))
-    }
-    
-    private var data: [(date: Date, value: Double)] {
-        return (-7..<14).map { i in
-            let currentDate = initDate.addingTimeInterval(Double(i) * 24 * 3600)
-            
-            if let matchingItem = data_base.first(where: { item in
-                calendar.component(.day, from: currentDate) == calendar.component(.day, from: Date(timeIntervalSince1970: TimeInterval(item.time_start)))
-                &&
-                calendar.component(.month, from: currentDate) == calendar.component(.month, from: Date(timeIntervalSince1970: TimeInterval(item.time_start)))
-                &&
-                calendar.component(.year, from: currentDate) == calendar.component(.year, from: Date(timeIntervalSince1970: TimeInterval(item.time_start)))
-            }) {
-                let value = Double(Date(timeIntervalSince1970: TimeInterval(matchingItem.time_end)).timeIntervalSince(Date(timeIntervalSince1970: TimeInterval(matchingItem.time_start)))) / 3600
-                return (date: currentDate, value: value)
-            } else {
-                return (date: currentDate, value: 0)
-                
-            }
-        }
-    }
-
-var body: some View {
-        Chart {
-ForEach(data, id: \.date) { item in
-BarMark(
-x: .value("Day", item.date, unit: .weekday),
-y: .value("Value", min(item.value, upperBound ?? item.value))
-                )
-            }
-        }
-        .onAppear {
-            upperBound = data[7..<14].map(\.value).max()
-            unitOffset = -4
-        }
-        .onChange(of: unitOffset) { newValue in
-withAnimation(.spring()) {
-                upperBound = data[7..<14].map(\.value).max()
-            }
-        }
-    }
-}
-struct InfiniteScrollChart: View {
-private let height: CGFloat = 250
+struct InfiniteScrollChart_2: View {
+private let height: CGFloat = 100
 private let numBins: Int = 7
 private let pagingAnimationDuration: CGFloat = 0.2
 @GestureState private var translation: CGFloat = .zero
@@ -122,7 +53,7 @@ HStack(alignment: .top, spacing: 0) {
 VStack(spacing: 0) {
                     chartContent
 // The actual width of the plot area is three times of page width
-                        .frame(width: chartContentContainerWidth * 3 , height: height)
+        .frame(width: chartContentContainerWidth * 3 , height: height)
                         .offset(x: translation)
                         .offset(x: offset)
                         .gesture(drag)
@@ -132,7 +63,7 @@ VStack(spacing: 0) {
                 .frame(width: chartContentContainerWidth)
                 .clipped()
                 chartYAxis
-                    .modifier(YAxisWidthModifier())
+                    
                     .onPreferenceChange(YAxisWidthPreferenceyKey.self) { newValue in
                         yAxisWidth = newValue
                         chartContentContainerWidth = geometry.size.width - yAxisWidth
@@ -154,7 +85,7 @@ values: .stride(by: .day)
                 )
             }
             .chartYAxis {
-AxisMarks(position: .trailing, values: .automatic(desiredCount: 4)) {
+AxisMarks(position: .trailing, values: .automatic(desiredCount: 0)) {
 AxisGridLine()
                 }
             }
@@ -163,17 +94,18 @@ var chartYAxis: some View {
         chart
             .foregroundStyle(.clear)
             .chartYAxis {
-AxisMarks(position: .trailing, values: .automatic(desiredCount: 4))
+AxisMarks(position: .trailing, values: .automatic(desiredCount: 0))
             }
             .chartPlotStyle { plot in
                 plot.frame(width: 0)
             }
     }
 }
-struct InfinityScrollChart_Previews: PreviewProvider {
+struct InfinityScrollChart_Previews_2: PreviewProvider {
 static var previews: some View {
-InfiniteScrollChart()
+InfiniteScrollChart_2()
             .padding(.horizontal, 4)
             .environment(\.locale, .init(identifier: "en_US"))
     }
 }
+

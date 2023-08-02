@@ -7,12 +7,12 @@
 //
 
 import SwiftUI
+import Charts
 
 struct animal_activity_repos: View {
     var body: some View {
         VStack(alignment: .leading) {
             ZStack {
-                
                 VStack {
                     HStack(alignment: .top, spacing: 100.0) {
                         VStack(alignment: .leading, spacing: 10) {
@@ -52,8 +52,7 @@ struct animal_activity_repos: View {
                         
                         
                         ZStack{
-                            Circle()
-                                .stroke(Color.blue, lineWidth: 20)
+                            ring_circle()
                                 .frame(width: 125, height: 140)
                             VStack {
                                 Text("7h")
@@ -74,8 +73,7 @@ struct animal_activity_repos: View {
                     }
                     .frame(width: 330 )
                     
-                    HStack(alignment: .top, spacing: 90.0) {
-                        HStack() {
+                    HStack(alignment: .top, spacing: 30.0) {
                             VStack(alignment: .leading) {
                                     HStack {
                                         Image(systemName: "bed.double.fill")
@@ -88,17 +86,13 @@ struct animal_activity_repos: View {
                                         .font(.system(size: 50))
                                         .fontWeight(.bold)
                             }
-                            InfiniteScrollChart()
+                            InfiniteScrollChart_2()
                                         .padding(.horizontal, 4)
                                         .environment(\.locale, .init(identifier: "en_US"))
-                                        
-                                        
-                                        
-                        }
-                        
+                                        .frame(width: 200)
                     }
                 }
-                .padding()
+                .padding(25)
                 
                 
         }

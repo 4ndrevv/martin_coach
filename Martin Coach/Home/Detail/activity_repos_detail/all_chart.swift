@@ -24,10 +24,16 @@ struct all_chart: View {
                 .font(.title)
                 .fontWeight(.bold)
                 .frame(maxWidth: .infinity, alignment: .leading)
+            Spacer()
             InfiniteScrollChart()
-                        .padding(.horizontal, 4)
+                        .padding(.horizontal, 7)
                         .environment(\.locale, .init(identifier: "en_US"))
-            
+                        .background {
+                            RoundedRectangle( cornerRadius: 10, style: .continuous)
+                                .fill(.white.shadow(.drop(radius: 2)))
+                                .frame(height: 300)
+                        }
+            Spacer()
             Text("Progress")
                 .font(.title)
                 .fontWeight(.bold)
