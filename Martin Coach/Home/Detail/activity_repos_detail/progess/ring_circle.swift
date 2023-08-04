@@ -21,7 +21,7 @@ struct ring_circle: View {
                 }
                 ZStack {
                     Circle()
-                        .stroke(.gray.opacity(0.2), lineWidth: 25)
+                        .stroke(.gray.opacity(0), lineWidth: 25)
                     
                     if index != 0 { // Handle first ring differently since there's no previous ring
                         Circle()

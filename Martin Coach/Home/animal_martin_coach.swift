@@ -17,7 +17,7 @@ struct animal_martin_coach: View {
                 .foregroundColor(rectangleColor)
                 .frame(width: 220, height: 110)
                 .cornerRadius(20)
-                .shadow(color: Color.black.opacity(0.5), radius: 20, x: 0, y: 2)
+                .shadow(color: Color.gray.opacity(0.6), radius: 40)
             HStack {
                 ZStack {
                     

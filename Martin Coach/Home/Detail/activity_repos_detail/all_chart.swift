@@ -30,7 +30,7 @@ struct all_chart: View {
                         .environment(\.locale, .init(identifier: "en_US"))
                         .background {
                             RoundedRectangle( cornerRadius: 10, style: .continuous)
-                                .fill(.white.shadow(.drop(radius: 2)))
+                                .fill(.white)
                                 .frame(height: 300)
                         }
             Spacer()

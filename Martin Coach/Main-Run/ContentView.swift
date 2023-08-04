@@ -10,10 +10,9 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        tab_bar()
+        tab_bar_home()
     }
 }
-
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

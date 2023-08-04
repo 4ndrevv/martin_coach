@@ -41,7 +41,7 @@ struct activity_ring_card: View {
         .frame(maxWidth: .infinity)
         .background {
             RoundedRectangle( cornerRadius: 10, style: .continuous)
-                .fill(.white.shadow(.drop(radius: 2)))
+                .fill(.white)
         }
     }
 }

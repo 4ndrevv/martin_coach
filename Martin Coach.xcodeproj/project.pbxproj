@@ -13,6 +13,7 @@
 		3D36F35C2A6FD4D200F043EE /* animal_martin_coach.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36F35B2A6FD4D200F043EE /* animal_martin_coach.swift */; };
 		3D36F3662A700C5300F043EE /* graph_repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36F3652A700C5300F043EE /* graph_repos.swift */; };
 		3D36F3682A70192700F043EE /* graph_repos_mini.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36F3672A70192700F043EE /* graph_repos_mini.swift */; };
+		3D7946B62A7D25660049F51A /* animal_profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D7946B52A7D25660049F51A /* animal_profile.swift */; };
 		3DCE24552A7AA6930097DBCF /* animal_icon_circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCE24542A7AA6930097DBCF /* animal_icon_circle.swift */; };
 		3DF215A72A7A6894006F1FAA /* tab_bar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF215A62A7A6894006F1FAA /* tab_bar.swift */; };
 		53C6AFD92A389ADC00BC1B71 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53C6AFD82A389ADC00BC1B71 /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		3D36F35B2A6FD4D200F043EE /* animal_martin_coach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_martin_coach.swift; sourceTree = "<group>"; };
 		3D36F3652A700C5300F043EE /* graph_repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph_repos.swift; sourceTree = "<group>"; };
 		3D36F3672A70192700F043EE /* graph_repos_mini.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph_repos_mini.swift; sourceTree = "<group>"; };
+		3D7946B52A7D25660049F51A /* animal_profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_profile.swift; sourceTree = "<group>"; };
 		3DCE24542A7AA6930097DBCF /* animal_icon_circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_icon_circle.swift; sourceTree = "<group>"; };
 		3DF215A62A7A6894006F1FAA /* tab_bar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tab_bar.swift; sourceTree = "<group>"; };
 		53C6AFD52A389ADC00BC1B71 /* Martin Coach.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Martin Coach.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -281,6 +283,7 @@
 				3D36F3582A6FC37D00F043EE /* animal_activity_repos.swift */,
 				3D36F35B2A6FD4D200F043EE /* animal_martin_coach.swift */,
 				3DCE24542A7AA6930097DBCF /* animal_icon_circle.swift */,
+				3D7946B52A7D25660049F51A /* animal_profile.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				CDD0320B2A4446E800CF997D /* extensions.swift in Sources */,
 				CD22F6962A45E18F00FA754F /* blur.swift in Sources */,
 				3DF215A72A7A6894006F1FAA /* tab_bar.swift in Sources */,
+				3D7946B62A7D25660049F51A /* animal_profile.swift in Sources */,
 				3D36F3682A70192700F043EE /* graph_repos_mini.swift in Sources */,
 				CDC377A02A5C1DC200898E66 /* progress_struct.swift in Sources */,
 				3D09AC1B2A7267360057DD52 /* graph_struct_repos.swift in Sources */,

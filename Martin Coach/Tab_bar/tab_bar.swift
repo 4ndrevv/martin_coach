@@ -36,7 +36,12 @@ struct tab_bar_home: View {
                 Color.red
                     .tag(tabItems[0])
                     .ignoresSafeArea(.all, edges: .top)
-                Home()
+                GeometryReader {
+                    let size = $0.size
+                    let safeArea = $0.safeAreaInsets
+                    HomeView(size: size, safeArea: safeArea)
+                        .ignoresSafeArea(.all, edges: .top)
+                                }
                     .tag(tabItems[1])
                 Color.yellow
                     .tag(tabItems[2])
@@ -108,6 +113,7 @@ struct TabBarButton : View {
             .frame(width: 70, height: 50)
             .offset(y: selected == value ? -15 : 0)
         })
+        
     }
 }
 

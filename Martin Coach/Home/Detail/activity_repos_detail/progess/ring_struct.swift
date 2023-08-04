@@ -20,9 +20,9 @@ struct ring: Identifiable {
 
 var rings: [ring] = [
 
-    ring(progress: 55, value: "Walking", keyIcon: "figure.walk", keyColor: Color.green),
-    ring(progress: 15, value: "Run", keyIcon: "figure.run", keyColor: Color.red),
-    ring(progress: 30, value: "Jogging", keyIcon: "figure.stand", keyColor: Color.purple, isText: true)
+    ring(progress: 55, value: "Walking", keyIcon: "figure.walk", keyColor: Color.red),
+    ring(progress: 15, value: "Run", keyIcon: "figure.run", keyColor: Color.yellow),
+    ring(progress: 30, value: "Jogging", keyIcon: "figure.stand", keyColor: Color.orange, isText: true)
     ]
 
 struct activity_data: Identifiable {

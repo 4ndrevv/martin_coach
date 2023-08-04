@@ -5,7 +5,7 @@
 //  Created by Pierre DOMINGUEZ on 14/06/2023.
 //  Copyright © 2023 Martin Sellier. All rights reserved.
 //
-
+/*
 import SwiftUI
 
 struct animal_list: View {
@@ -14,6 +14,7 @@ struct animal_list: View {
     @State var showModal_user = false
     @State var showModal_animal_add = false
     @Environment(\.presentationMode) var presentationMode
+    @Binding var isHomeSelected: Bool
     
     
     
@@ -24,7 +25,13 @@ struct animal_list: View {
                             animal_tab()
                             }
                             .fullScreenCover(isPresented: $showModal_animal) {
-                                                Home()
+                                GeometryReader {
+                                    let size = $0.size
+                                    let safeArea = $0.safeAreaInsets
+                                    
+                                    HomeView(size: size, safeArea: safeArea)
+                                        .ignoresSafeArea(.all, edges: .top)
+                                }
                             }
                         
                     }
@@ -54,7 +61,8 @@ struct animal_list: View {
 }
 
 struct animal_list_Previews: PreviewProvider {
-    static var previews: some View {
-        animal_list()
-    }
+   static var previews: some View {
+       animal_list()
+   }
 }
+*/

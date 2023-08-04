@@ -14,6 +14,7 @@ struct animal_activity_repos_detail: View {
             all_chart()
         }
         .frame(maxWidth : .infinity)
+        .background(Color.gray.opacity(0.09))
         }
     
     }

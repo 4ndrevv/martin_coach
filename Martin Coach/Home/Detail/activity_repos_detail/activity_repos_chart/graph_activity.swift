@@ -44,7 +44,7 @@ struct graph_activity: View {
                 .padding()
                 .background {
                     RoundedRectangle( cornerRadius: 10, style: .continuous)
-                        .fill(.white.shadow(.drop(radius: 2)))
+                        .fill(.white)
                 }
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)

@@ -37,7 +37,7 @@ struct animal_food: View {
                 }
                 .background {
                     RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .fill(.white.shadow(.drop(radius: 20)))
+                    .fill(.white.shadow(.drop(radius: 20)))
                 }
                            
                        

@@ -11,31 +11,44 @@ import SwiftUI
 struct HomeView: View {
     var size: CGSize
     var safeArea: EdgeInsets
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     ///view properties
     @State private var offsetY: CGFloat = 0
     var body: some View {
         NavigationView {
             ZStack{
-                Color.yellow.opacity(0.8)
+                Color.white.opacity(1)
                     .edgesIgnoringSafeArea(.all)
                 ScrollView(.vertical, showsIndicators: false) {
                     HeaderView()
                     ///making to top
                         .zIndex(1000)
-                    animal_martin_coach()
-                        .scaleEffect(0.7)
+                    
                     VStack(spacing: 35) {
-                        Text("Activity")
-                            .font(.system(size: 27))
-                            .fontWeight(.bold)
-                            .padding(.leading, 6.0)
-                            .padding(.bottom, -8)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, 16.0)
-                        NavigationLink(destination: animal_activity_repos_detail()){
-                            animal_activity_repos()
+                        HStack(alignment: .bottom) {
+                            Text("Today")
+                                .font(.system(size: 27))
+                                .fontWeight(.bold)
+                            Text("last update " + date_time_actuel())
+                                .font(.system(size: 11))
+                                .italic()
+                                .opacity(00.4)
+                                .padding(.bottom, 5)
                         }
-                        .buttonStyle(PlainButtonStyle())
+                        .padding(.leading, 6.0)
+                        .padding(.bottom, -8)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 16.0)
+                        
+                        //NavigationLink(destination: animal_activity_repos_detail()){
+                         //   animal_activity_repos()
+                        //}
+                        //.buttonStyle(PlainButtonStyle())
+                        
+                        NavigationLink(destination: animal_activity_repos_detail()) {
+                                animal_activity_repos()
+                                       }
+                                       .buttonStyle(PlainButtonStyle())
                         
                         Text("Food")
                             .font(.system(size: 27))
@@ -66,6 +79,9 @@ struct HomeView: View {
             
             
         }
+        .refreshable{
+            
+        }
     }
     
     @ViewBuilder
@@ -85,15 +101,16 @@ struct HomeView: View {
                         let rect = $0.frame(in: .global)
                         ///Since Scalling of the image is 0.3 (1-0.7)
                         let halfScaledHeight = ( rect.height * 0.3) * 0.5
-                        let bottomPadding: CGFloat = 15
+                        let bottomPadding: CGFloat = 17
                         let resizedOffsetY = (-(minimumHeaderHeight - halfScaledHeight - bottomPadding))
                         
-                        animal_icon_circle()
-                             .frame(width: rect.width, height: rect.height)
-                             ///Scaling item
-                             .scaleEffect(1 - (progress * 0.5), anchor: .center)
-                             ///Moving scale effect
-                             .offset(x: progress, y: -resizedOffsetY * progress+40)
+                        NavigationLink(destination: animal_profile()) {
+                            animal_icon_circle()
+                                .frame(width: rect.width, height: rect.height)
+                                .scaleEffect(1 - (progress * 0.6), anchor: .center)
+                                .offset(x: progress, y: -resizedOffsetY * progress + 40)
+                                .shadow(color: Color.black.opacity(0.4), radius: 5, x: 0, y: 5)
+                        }
                         
                     }
                     .frame(width: headerHeight * 0.5, height: headerHeight * 0.5)
@@ -112,10 +129,9 @@ struct HomeView: View {
             .frame(height: (headerHeight + offsetY) < minimumHeaderHeight ? minimumHeaderHeight : (headerHeight + offsetY), alignment: .bottom)
             ///sticking to the top
             .offset(y: -offsetY)
-            .shadow(color: Color.black.opacity(0.4), radius: 5, x: 0, y: 5)
+            //.shadow(color: Color.black.opacity(0.4), radius: 5, x: 0, y: 5)
         }
         .frame(height: headerHeight)
-        
         
     }
     func getRectangleColorForProgress(_ progress: CGFloat) -> Color {
@@ -124,14 +140,23 @@ struct HomeView: View {
 
         return progress > 0.95 ? yellow : black
     }
-
-
-
-
+    func date_time_actuel() -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm:ss / dd-MM-yyyy"
+        let date_time = Date()
+        let date_time_final = dateFormatter.string(from: date_time)
+        return date_time_final
+    }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        GeometryReader {
+                   let size = $0.size
+                   let safeArea = $0.safeAreaInsets
+                   
+                   HomeView(size: size, safeArea: safeArea)
+                       .ignoresSafeArea(.all, edges: .top)
+               }
     }
 }

@@ -51,7 +51,7 @@ struct progress_tab: View {
             
             .background {
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
-                    .fill(.white.shadow(.drop(radius: 2)))
+                    .fill(.white)
             }
         }
 

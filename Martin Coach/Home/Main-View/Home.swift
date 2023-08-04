@@ -6,24 +6,22 @@
 //  Copyright © 2023 Martin Sellier. All rights reserved.
 //
 
-import SwiftUI
+/*
+ import SwiftUI
 
 struct Home: View {
+    @Binding var isHomeSelected: Bool
     var body: some View {
         GeometryReader {
             let size = $0.size
             let safeArea = $0.safeAreaInsets
             
-            HomeView(size: size, safeArea: safeArea)
+            HomeView(size: size, safeArea: safeArea, isHomeSelected: $isHomeSelected)
                 .ignoresSafeArea(.all, edges: .top)
         }
     }
 }
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        Home()
-    }
-}
+*/
 
 
