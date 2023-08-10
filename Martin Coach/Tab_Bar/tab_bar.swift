@@ -43,7 +43,7 @@ struct tab_bar_home: View {
                         .ignoresSafeArea(.all, edges: .top)
                                 }
                     .tag(tabItems[1])
-                Color.yellow
+                animal_menu()
                     .tag(tabItems[2])
                     .ignoresSafeArea(.all, edges: .top)
             }

@@ -11,7 +11,6 @@ import SwiftUI
 struct HomeView: View {
     var size: CGSize
     var safeArea: EdgeInsets
-    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     ///view properties
     @State private var offsetY: CGFloat = 0
     var body: some View {
@@ -49,6 +48,7 @@ struct HomeView: View {
                                 animal_activity_repos()
                                        }
                                        .buttonStyle(PlainButtonStyle())
+                                       
                         
                         Text("Food")
                             .font(.system(size: 27))

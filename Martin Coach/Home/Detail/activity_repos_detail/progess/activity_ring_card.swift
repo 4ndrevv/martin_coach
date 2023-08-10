@@ -10,14 +10,8 @@ import SwiftUI
 
 struct activity_ring_card: View {
     var body: some View {
-        HStack(spacing: 70){
+        HStack(alignment: .center, spacing: 70){
             VStack(alignment: .leading, spacing: 1) {
-                Text("Time")
-                    .fontWeight(.semibold)
-                    .frame( alignment: .leading)
-                Text("7h")
-                    .font(.system(size: 45, weight: .bold))
-                    .frame(alignment: .leading)
                 VStack(alignment: .leading, spacing: 10){
                     ForEach(rings) { ring in
                             HStack(alignment: .center, spacing: 5){
@@ -35,8 +29,22 @@ struct activity_ring_card: View {
                 
             }
             
-            .padding(.vertical, 15)
-            ring_circle()
+            .padding(.vertical, 45)
+            ZStack{
+                ring_circle()
+                VStack(alignment: .center, spacing: 2) {
+                    Text("7h")
+                        .font(.system(size: 50))
+                        .fontWeight(.bold)
+                        .padding(.bottom, -4)
+                    Text("30 min")
+                        .font(.system(size: 15))
+                        .fontWeight(.bold)
+                        .padding(.bottom, -4)
+                    
+                }
+            }
+            
         }
         .frame(maxWidth: .infinity)
         .background {

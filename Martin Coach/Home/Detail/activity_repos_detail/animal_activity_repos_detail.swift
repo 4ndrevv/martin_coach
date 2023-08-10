@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct animal_activity_repos_detail: View {
+    @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     var body: some View {
         ScrollView (.vertical, showsIndicators: false) {
             all_chart()
         }
-        .frame(maxWidth : .infinity)
+        .frame(maxWidth : .infinity )
         .background(Color.gray.opacity(0.09))
         }
     
