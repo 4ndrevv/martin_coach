@@ -1,67 +1,61 @@
-//
-//  animal_list.swift
-//  Martin Coach
-//
-//  Created by Pierre DOMINGUEZ on 14/06/2023.
-//  Copyright © 2023 Martin Sellier. All rights reserved.
-//
 
 import SwiftUI
 
-struct animal_list: View {
-
-    @State var showModal_animal = false
-    @State var showModal_user = false
-    @State var showModal_animal_add = false
-    @Environment(\.presentationMode) var presentationMode
-    
-    
+struct ContentView_2: View {
+    @State private var isShowingImagePicker = false
+    @State private var selectedImage: Image?
     
     var body: some View {
-            NavigationView {
-                    ScrollView {
-                        Button(action:{showModal_animal = true}) {
-                            animal_tab()
-                            }
-                            .fullScreenCover(isPresented: $showModal_animal) {
-                                GeometryReader {
-                                    let size = $0.size
-                                    let safeArea = $0.safeAreaInsets
-                                    
-                                    HomeView(size: size, safeArea: safeArea)
-                                        .ignoresSafeArea(.all, edges: .top)
-                                }
-                            }
-                        
+        ZStack {
+            Circle()
+                .foregroundColor(Color.blue)
+                .frame(width: 150, height: 150)
+                .onTapGesture {
+                    isShowingImagePicker = true
+                }
+            
+            Text("Tap to Add Photo")
+                .foregroundColor(.white)
+                .font(.headline)
+                .padding()
+            
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        // Show camera
+                    }) {
+                        Image(systemName: "camera")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding()
                     }
-                    .navigationTitle("My Animals")
-                    .navigationBarItems(trailing:
-                                            Button(action: {
-                                                showModal_animal_add = true
-                                            }) {
-                                                Image(systemName: "plus.circle.fill")
-                                            }
-                                            .fullScreenCover(isPresented: $showModal_animal_add) {
-                                                animal_add()
-                                        })
-                    .navigationBarItems(leading:
-                                        Button(action: {
-                                            showModal_user = true
-                                        }) {
-                                            Image(systemName: "person.circle.fill")
-                                        }
-                                        .fullScreenCover(isPresented: $showModal_user) {
-                                            user()
-                                    }
-                                )
+                    
+                    Button(action: {
+                        // Show photo library
+                    }) {
+                        Image(systemName: "photo")
+                            .font(.title)
+                            .foregroundColor(.white)
+                            .padding()
+                    }
+                }
             }
+            .padding()
+            .opacity(isShowingImagePicker ? 1 : 0)
         }
-    
+        .sheet(isPresented: $isShowingImagePicker) {
+            // Present the image picker here
+            // You can use UIImagePickerController or a custom image picker
+        }
+    }
 }
 
-struct animal_list_Previews: PreviewProvider {
-   static var previews: some View {
-       animal_list()
-   }
+struct YourApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView_2()
+        }
+    }
 }
-

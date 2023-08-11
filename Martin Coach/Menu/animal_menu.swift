@@ -9,37 +9,64 @@
 import SwiftUI
 
 struct animal_menu: View {
+    //Image picker of photo header
+    @State private var showSheet: Bool = false
+    @State private var showImagePicker: Bool = false
+    @State private var sourceType: UIImagePickerController.SourceType = .camera
+    @State private var image: UIImage?
     var body: some View {
         NavigationView{
             ScrollView{
-                HStack{
-                    Image("user_photo")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .clipShape(Circle())
-                        .frame(width: 70, height: 70)
-                        .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
-                    Spacer()
-                    VStack(alignment: .leading){
-                        Text("Hugo GASTON")
-                            .font(.system(size: 20))
-                            .font(.title)
-                            .bold()
-                        Text("13/05/1999")
-                            .font(.system(size: 10))
-                            .opacity(0.5)
-                            .italic()
-                        
+                Button(action: {
+                    self.showSheet = true
+                }){
+                    HStack{
+                        Image(uiImage: image ?? UIImage(systemName: "person.circle.fill")!)
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .clipShape(Circle())
+                            .frame(width: 70, height: 70)
+                            .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
+                        Spacer()
+                        VStack(alignment: .leading){
+                            Text("Hugo GASTON")
+                                .font(.system(size: 20))
+                                .font(.title)
+                                .bold()
+                            Text("13/05/1999")
+                                .font(.system(size: 10))
+                                .opacity(0.5)
+                                .italic()
+                            
+                        }
                     }
+                    .padding(25)
+                    .background {
+                        RoundedRectangle(cornerRadius: 20, style: .continuous)
+                            .stroke(Color.yellow, lineWidth: 2) // Adding yellow stroke
+                            .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(1)))
+                            .padding(.top, -10)
+                    }
+                    .padding(50)
                 }
-                .padding(25)
-                .background {
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .stroke(Color.yellow, lineWidth: 2) // Adding yellow stroke
-                        .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(1)))
-                        .padding(.top, -10)
+                .actionSheet(isPresented: $showSheet) {
+                    ActionSheet(title: Text("Select Photo"), message: Text("Choose"), buttons: [
+                        .default(Text("Photo Library")) {
+                            self.showImagePicker = true
+                            self.sourceType = .photoLibrary
+                        },
+                        .default(Text("Camera")) {
+                            self.showImagePicker = true
+                            self.sourceType = .camera
+                        },
+                        .cancel()
+                    ])
                 }
-                .padding(50)
+                .sheet(isPresented: $showImagePicker) {
+                    ImagePicker(image: self.$image, isShown: self.$showImagePicker, sourceType: self.sourceType)
+                }
+                .buttonStyle(PlainButtonStyle())
+                
                 
                 VStack(alignment: .leading){
                     HStack{
