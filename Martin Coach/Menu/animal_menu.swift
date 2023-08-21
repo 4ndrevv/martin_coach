@@ -42,10 +42,8 @@ struct animal_menu: View {
                     }
                     .padding(25)
                     .background {
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .stroke(Color.yellow, lineWidth: 2) // Adding yellow stroke
-                            .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(1)))
-                            .padding(.top, -10)
+                    RoundedRectangle( cornerRadius: 10, style: .continuous)
+                    .fill(.white)
                     }
                     .padding(50)
                 }
@@ -76,16 +74,16 @@ struct animal_menu: View {
                             .bold()
                         Spacer()
                         Image(systemName: "chevron.right")
-                            .opacity(0.4)
+                            .foregroundColor(Color.black)
                             .font(.system(size: 13))
                             .font(.title)
                             .bold()
                     }
-                    Rectangle().frame(height: 1).foregroundColor(Color.yellow)
+                    Rectangle().frame(height: 1).foregroundColor(Color.black).opacity(0.6)
                     Text("M. GASTON Hugo")
                     Text("13/05/1999")
                     Text("+33 6 64 53 01 46")
-                    Rectangle().frame(height: 1).foregroundColor(Color.yellow)
+                    Rectangle().frame(height: 1).foregroundColor(Color.black).opacity(0.6)
                     Text("Appt 426 - Batiment B")
                     Text("2 Rue Chemin Vert")
                     Text("Aulnoy-lez-Valenciennes")
@@ -93,10 +91,8 @@ struct animal_menu: View {
                 }
                 .padding()
                 .background {
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .stroke(Color.yellow, lineWidth: 2) // Adding yellow stroke
-                        .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(1)))
-                        .padding(.top, -10)
+                RoundedRectangle( cornerRadius: 10, style: .continuous)
+                .fill(.white)
                 }
                 .padding()
                 
@@ -113,7 +109,7 @@ struct animal_menu: View {
                             .font(.title)
                             .bold()
                     }
-                    Rectangle().frame(height: 1).foregroundColor(Color.yellow)
+                    Rectangle().frame(height: 1).foregroundColor(Color.black).opacity(0.6)
                     HStack(alignment: .center, spacing: 25){
                         VStack{
                             Image("chat_photo")
@@ -157,10 +153,8 @@ struct animal_menu: View {
                 }
                 .padding()
                 .background {
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .stroke(Color.yellow, lineWidth: 2) // Adding yellow stroke
-                        .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(1)))
-                        .padding(.top, -10)
+                RoundedRectangle( cornerRadius: 10, style: .continuous)
+                .fill(.white)
                 }
                 .padding()
                 
@@ -177,7 +171,7 @@ struct animal_menu: View {
                             .font(.title)
                             .bold()
                     }
-                    Rectangle().frame(height: 1).foregroundColor(Color.yellow)
+                    Rectangle().frame(height: 1).foregroundColor(Color.black).opacity(0.6)
                     HStack(alignment: .center, spacing: 25){
                         VStack{
                             Image("docter_photo")
@@ -221,10 +215,8 @@ struct animal_menu: View {
                 }
                 .padding()
                 .background {
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .stroke(Color.yellow, lineWidth: 2) // Adding yellow stroke
-                        .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(1)))
-                        .padding(.top, -10)
+                RoundedRectangle( cornerRadius: 10, style: .continuous)
+                .fill(.white)
                 }
                 .padding()
                 
@@ -241,16 +233,14 @@ struct animal_menu: View {
                             .font(.title)
                             .bold()
                     }
-                    Rectangle().frame(height: 1).foregroundColor(Color.yellow)
+                    Rectangle().frame(height: 1).foregroundColor(Color.black).opacity(0.6)
                     Text("English")
                     
                 }
                 .padding()
                 .background {
-                    RoundedRectangle(cornerRadius: 20, style: .continuous)
-                        .stroke(Color.yellow, lineWidth: 2) // Adding yellow stroke
-                        .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(1)))
-                        .padding(.top, -10)
+                RoundedRectangle( cornerRadius: 10, style: .continuous)
+                .fill(.white)
                 }
                 .padding()
                 
@@ -274,6 +264,7 @@ struct animal_menu: View {
                 .buttonStyle(PlainButtonStyle())
                 .padding()
             }
+            .background(Color.gray.opacity(0.09))
         }
         .navigationTitle("Profile")
         .navigationBarItems(trailing:

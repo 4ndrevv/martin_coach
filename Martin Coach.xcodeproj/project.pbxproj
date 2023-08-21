@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D0580482A93738E00A08029 /* simulation_tab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D0580472A93738E00A08029 /* simulation_tab.swift */; };
 		3D09AC1B2A7267360057DD52 /* graph_struct_repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09AC1A2A7267360057DD52 /* graph_struct_repos.swift */; };
 		3D09AC1D2A7277610057DD52 /* check_and_test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D09AC1C2A7277610057DD52 /* check_and_test.swift */; };
 		3D36F3592A6FC37D00F043EE /* animal_activity_repos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D36F3582A6FC37D00F043EE /* animal_activity_repos.swift */; };
@@ -40,9 +41,8 @@
 		CD8556A92A542A6A00E992AD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8556A82A542A6A00E992AD /* HomeView.swift */; };
 		CD8556AD2A5448B900E992AD /* Scroll_home_detector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8556AC2A5448B900E992AD /* Scroll_home_detector.swift */; };
 		CD8556B12A54A88300E992AD /* animal_food.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8556B02A54A88300E992AD /* animal_food.swift */; };
-		CDBC06302A581B3500B338C4 /* animal_activity_repos_detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC062F2A581B3500B338C4 /* animal_activity_repos_detail.swift */; };
 		CDBC06342A581B7100B338C4 /* animal_food_detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC06332A581B7100B338C4 /* animal_food_detail.swift */; };
-		CDBC06412A58425B00B338C4 /* all_chart.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC06402A58425B00B338C4 /* all_chart.swift */; };
+		CDBC06412A58425B00B338C4 /* animal_activity_repos_detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC06402A58425B00B338C4 /* animal_activity_repos_detail.swift */; };
 		CDBC06432A58518900B338C4 /* activity_ring_card.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC06422A58518900B338C4 /* activity_ring_card.swift */; };
 		CDBC06452A58535C00B338C4 /* ring_struct.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC06442A58535C00B338C4 /* ring_struct.swift */; };
 		CDBC064C2A5BF52600B338C4 /* ring_circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBC064B2A5BF52600B338C4 /* ring_circle.swift */; };
@@ -60,6 +60,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3D0580472A93738E00A08029 /* simulation_tab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = simulation_tab.swift; sourceTree = "<group>"; };
 		3D09AC1A2A7267360057DD52 /* graph_struct_repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graph_struct_repos.swift; sourceTree = "<group>"; };
 		3D09AC1C2A7277610057DD52 /* check_and_test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = check_and_test.swift; path = "Martin Coach/Home/Detail/activity_repos_detail/activity_repos_chart/check_and_test.swift"; sourceTree = SOURCE_ROOT; };
 		3D36F3582A6FC37D00F043EE /* animal_activity_repos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_activity_repos.swift; sourceTree = "<group>"; };
@@ -94,9 +95,8 @@
 		CD8556A82A542A6A00E992AD /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		CD8556AC2A5448B900E992AD /* Scroll_home_detector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scroll_home_detector.swift; sourceTree = "<group>"; };
 		CD8556B02A54A88300E992AD /* animal_food.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_food.swift; sourceTree = "<group>"; };
-		CDBC062F2A581B3500B338C4 /* animal_activity_repos_detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_activity_repos_detail.swift; sourceTree = "<group>"; };
 		CDBC06332A581B7100B338C4 /* animal_food_detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_food_detail.swift; sourceTree = "<group>"; };
-		CDBC06402A58425B00B338C4 /* all_chart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = all_chart.swift; sourceTree = "<group>"; };
+		CDBC06402A58425B00B338C4 /* animal_activity_repos_detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = animal_activity_repos_detail.swift; sourceTree = "<group>"; };
 		CDBC06422A58518900B338C4 /* activity_ring_card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activity_ring_card.swift; sourceTree = "<group>"; };
 		CDBC06442A58535C00B338C4 /* ring_struct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ring_struct.swift; sourceTree = "<group>"; };
 		CDBC064B2A5BF52600B338C4 /* ring_circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ring_circle.swift; sourceTree = "<group>"; };
@@ -125,6 +125,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D0580492A9373EC00A08029 /* simulation */ = {
+			isa = PBXGroup;
+			children = (
+				3D0580472A93738E00A08029 /* simulation_tab.swift */,
+			);
+			path = simulation;
+			sourceTree = "<group>";
+		};
+		3D05804A2A9373FC00A08029 /* food */ = {
+			isa = PBXGroup;
+			children = (
+				3D7F4DEC2A853716006817C3 /* graph_food.swift */,
+			);
+			path = food;
+			sourceTree = "<group>";
+		};
+		3D05804B2A93741000A08029 /* food_activity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = food_activity;
+			sourceTree = "<group>";
+		};
 		3D36F35D2A6FFFEC00F043EE /* Tab_Bar */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +159,7 @@
 		3D5DAEB02A83D7AB00D87E85 /* Profile_Animal */ = {
 			isa = PBXGroup;
 			children = (
+				3D7946B52A7D25660049F51A /* animal_profile.swift */,
 				3D36F35B2A6FD4D200F043EE /* animal_martin_coach.swift */,
 				3D5DAEB12A83D7F600D87E85 /* animal_identify.swift */,
 				3D7F4DE62A84E603006817C3 /* animal_adresse.swift */,
@@ -278,8 +302,8 @@
 		CDBC06462A585E5700B338C4 /* activity_repos_detail */ = {
 			isa = PBXGroup;
 			children = (
-				CDBC062F2A581B3500B338C4 /* animal_activity_repos_detail.swift */,
-				CDBC06402A58425B00B338C4 /* all_chart.swift */,
+				3D36F3582A6FC37D00F043EE /* animal_activity_repos.swift */,
+				CDBC06402A58425B00B338C4 /* animal_activity_repos_detail.swift */,
 				CDC377A52A5C471900898E66 /* activity_repos_recent */,
 				CDC377A42A5C470100898E66 /* progess */,
 				CDC377A32A5C46F600898E66 /* activity_repos_chart */,
@@ -290,8 +314,11 @@
 		CDBC06472A585E7C00B338C4 /* food_detail */ = {
 			isa = PBXGroup;
 			children = (
+				CD8556B02A54A88300E992AD /* animal_food.swift */,
 				CDBC06332A581B7100B338C4 /* animal_food_detail.swift */,
-				3D7F4DEC2A853716006817C3 /* graph_food.swift */,
+				3D0580492A9373EC00A08029 /* simulation */,
+				3D05804A2A9373FC00A08029 /* food */,
+				3D05804B2A93741000A08029 /* food_activity */,
 			);
 			path = food_detail;
 			sourceTree = "<group>";
@@ -350,10 +377,7 @@
 				3D5DAEB02A83D7AB00D87E85 /* Profile_Animal */,
 				CDBC06372A581BC500B338C4 /* Detail */,
 				CDBC06362A581BAD00B338C4 /* Main_View */,
-				CD8556B02A54A88300E992AD /* animal_food.swift */,
-				3D36F3582A6FC37D00F043EE /* animal_activity_repos.swift */,
 				3DCE24542A7AA6930097DBCF /* animal_icon_circle.swift */,
-				3D7946B52A7D25660049F51A /* animal_profile.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -448,13 +472,12 @@
 				3D36F3662A700C5300F043EE /* graph_repos.swift in Sources */,
 				CDD032042A432C7C00CF997D /* login.swift in Sources */,
 				53C6AFDB2A389ADC00BC1B71 /* SceneDelegate.swift in Sources */,
-				CDBC06302A581B3500B338C4 /* animal_activity_repos_detail.swift in Sources */,
 				3DBD37C82A867BB600A3F55C /* ImagePicker.swift in Sources */,
 				CD22F68F2A45D32E00FA754F /* animal_form_view.swift in Sources */,
 				CDBE4F112A3B1142009223BA /* user.swift in Sources */,
 				3D09AC1D2A7277610057DD52 /* check_and_test.swift in Sources */,
 				3DBD37BD2A8661DB00A3F55C /* user_profile.swift in Sources */,
-				CDBC06412A58425B00B338C4 /* all_chart.swift in Sources */,
+				CDBC06412A58425B00B338C4 /* animal_activity_repos_detail.swift in Sources */,
 				3DBD37C02A8661FE00A3F55C /* user_list_animal.swift in Sources */,
 				CDBC064C2A5BF52600B338C4 /* ring_circle.swift in Sources */,
 				CDD032022A41EB1500CF997D /* animal_add.swift in Sources */,
@@ -475,6 +498,7 @@
 				3D09AC1B2A7267360057DD52 /* graph_struct_repos.swift in Sources */,
 				3DBD37C52A86624B00A3F55C /* user_system.swift in Sources */,
 				53C6AFDD2A389ADC00BC1B71 /* ContentView.swift in Sources */,
+				3D0580482A93738E00A08029 /* simulation_tab.swift in Sources */,
 				CD8556A92A542A6A00E992AD /* HomeView.swift in Sources */,
 				CDC377A22A5C235300898E66 /* progess_tab.swift in Sources */,
 				CD22F68A2A45CA0900FA754F /* Shapes.swift in Sources */,

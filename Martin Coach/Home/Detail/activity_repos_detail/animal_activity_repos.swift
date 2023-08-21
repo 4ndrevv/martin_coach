@@ -14,7 +14,7 @@ struct animal_activity_repos: View {
         VStack(alignment: .leading) {
             ZStack {
                 VStack {
-                    HStack(alignment: .top, spacing: 80.0) {
+                    HStack(alignment: .top, spacing: 100.0) {
                         VStack(alignment: .leading, spacing: 10) {
                             VStack(alignment: .leading) {
                                 HStack {
@@ -84,16 +84,16 @@ struct animal_activity_repos: View {
                             
                         }
                     }
-                    ZStack {
-                        Spacer().frame(height: 30)
-                        Rectangle()
+                
+                    Spacer().frame(height: 30)
+                    Rectangle()
                             .frame(height: 1)
                             .foregroundColor(Color.black)
                             .opacity(0.2)
-                    }
-                    .frame(width: 330 )
+                    Spacer().frame(height: 30)
+    
                     
-                    HStack(alignment: .top, spacing: 30.0) {
+                    HStack(alignment: .top, spacing: 56.0) {
                             VStack(alignment: .leading) {
                                     HStack {
                                         Image(systemName: "bed.double.fill")
@@ -109,7 +109,6 @@ struct animal_activity_repos: View {
                                         .padding(.bottom, -4)
                                     Text("h")
                                         .font(.system(size: 15))
-                                    
                                         .opacity(0.5)
                                     Text("30")
                                         .font(.system(size: 30))
@@ -131,6 +130,7 @@ struct animal_activity_repos: View {
                 
                 
         }
+            
             .background {
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
                     .fill(Color.white.opacity(1))

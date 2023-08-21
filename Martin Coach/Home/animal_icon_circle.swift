@@ -19,7 +19,7 @@ struct animal_icon_circle: View {
                  .overlay(
                      Circle()
                          .stroke(LinearGradient(gradient: Gradient(colors: [.red, .orange, .orange, .yellow, .yellow, .red]), startPoint: .topLeading, endPoint: .bottomTrailing), lineWidth: 6)
-                         .frame(width: 110, height: 240)
+                         .frame(width: 110, height: 110)
                  )
             Circle()
                 .foregroundColor(.yellow)

@@ -10,7 +10,7 @@ import SwiftUI
 
 struct activity_ring_card: View {
     var body: some View {
-        HStack(alignment: .center, spacing: 70){
+        HStack(alignment: .center, spacing: 90){
             VStack(alignment: .leading, spacing: 1) {
                 VStack(alignment: .leading, spacing: 10){
                     ForEach(rings) { ring in
@@ -57,5 +57,6 @@ struct activity_ring_card: View {
 struct activity_ring_card_Previews: PreviewProvider {
     static var previews: some View {
         activity_ring_card()
+            
     }
 }

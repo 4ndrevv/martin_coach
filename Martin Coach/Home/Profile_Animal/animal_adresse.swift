@@ -13,27 +13,26 @@ struct animal_adresse: View {
         VStack(alignment: .leading){
             HStack{
                 Text("Adresse")
+                    .foregroundColor(Color.black)
                     .font(.system(size: 20))
                     .font(.title)
                     .bold()
                 Spacer()
                 Image(systemName: "chevron.right")
-                    .opacity(0.4)
+                    .foregroundColor(Color.black)
                     .font(.system(size: 13))
                     .font(.title)
                     .bold()
             }
-            Rectangle().frame(height: 1).foregroundColor(Color.yellow)
+            Rectangle().frame(height: 1).foregroundColor(Color.black).opacity(0.5)
             Text("20 Avenue Buttes de Coesmes")
             Text("Aulnoy-lez-Valenciennes")
             Text("59300 - France")
         }
         .padding()
         .background {
-            RoundedRectangle(cornerRadius: 20, style: .continuous)
-                .stroke(Color.yellow, lineWidth: 2) // Adding yellow stroke
-                .background(RoundedRectangle(cornerRadius: 20, style: .continuous).fill(Color.white.opacity(1)))
-                .padding(.top, -10)
+            RoundedRectangle( cornerRadius: 10, style: .continuous)
+                .fill(.white)
         }
         .padding()
     }

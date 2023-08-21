@@ -44,10 +44,15 @@ struct HomeView: View {
                         //}
                         //.buttonStyle(PlainButtonStyle())
                         
-                        NavigationLink(destination: animal_activity_repos_detail()) {
+                        NavigationLink(destination:
+                            
+                                        animal_activity_repos_detail()
+                            .background(Color.gray.opacity(0.09))
+                        ) {
                                 animal_activity_repos()
                                        }
                                        .buttonStyle(PlainButtonStyle())
+                                       .padding()
                                        
                         
                         Text("Food")
@@ -59,11 +64,15 @@ struct HomeView: View {
                         
                             .padding(.leading, 16.0)
                         
-                        NavigationLink(destination: animal_food_detail()){
+                        NavigationLink(destination:
+                            animal_food_detail()
+                            .background(Color.gray.opacity(0.09))
+                        ){
                             animal_food()
                         }
                         .buttonStyle(PlainButtonStyle())
                         .padding(.bottom, 70)
+                        .padding()
                        
                     }
                     .background {
@@ -120,7 +129,8 @@ struct HomeView: View {
                         .font(.title)
                         .foregroundColor(.black)
                         .bold()
-                        .scaleEffect(1 - (progress * 1), anchor: .center)
+                        .opacity(1 - progress)
+                        .scaleEffect(1 - (progress * 1), anchor: .bottom)
                 }
                 .padding(.top, safeArea.top)
                 .padding(.bottom, 15)

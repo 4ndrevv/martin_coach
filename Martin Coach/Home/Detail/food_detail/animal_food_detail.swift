@@ -10,7 +10,6 @@ import SwiftUI
 
 struct animal_food_detail: View {
     var body: some View {
-        NavigationView{
             ScrollView{
                 VStack{
                     ZStack{
@@ -32,168 +31,19 @@ struct animal_food_detail: View {
                     Text("Simulation")
                         .font(.title)
                         .fontWeight(.bold)
-                        .frame(maxWidth: 330, alignment: .leading)
-                    VStack{
-                        HStack{
-                            VStack{
-                                Text("Product")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                                Image("product")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipShape(Circle())
-                                    .frame(width: 40, height: 40)
-                                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
-                                Text("Acane")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                            }
-                            Rectangle().frame(width: 1, height: 60).opacity(0.4).padding()
-                            
-                            VStack{
-                                Text("Total")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                                Text("90")
-                                    .font(.system(size: 33))
-                                    .frame(width: 70, height: 40)
-                                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
-                                Text("Gram")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                            }
-
-                            Rectangle().frame(width: 1, height: 60).opacity(0.4).padding()
-                            
-                            VStack{
-                                Text("Given")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                                Text("55")
-                                    .font(.system(size: 23))
-                                    .frame(width: 40, height: 40)
-                                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
-                                Text("Gram")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                            }
-                            
-                            VStack{
-                                Text("Rest")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                                Text("35")
-                                    .font(.system(size: 23))
-                                    .frame(width: 40, height: 40)
-                                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
-                                Text("Gram")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                            }
-                        }
-                        Rectangle().frame(height: 1).opacity(0.5)
-                            .padding()
-                        HStack{
-                            VStack{
-                                Text("Product")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                                Image("product_2")
-                                    .resizable()
-                                    .aspectRatio(contentMode: .fill)
-                                    .clipShape(Circle())
-                                    .frame(width: 40, height: 40)
-                                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
-                                Text("Pate")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                            }
-                            Rectangle().frame(width: 1, height: 60).opacity(0.4).padding()
-                            
-                            VStack{
-                                Text("Total")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                                Text("40")
-                                    .font(.system(size: 33))
-                                    .frame(width: 70, height: 40)
-                                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
-                                Text("Gram")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                            }
-
-                            Rectangle().frame(width: 1, height: 60).opacity(0.4).padding()
-                            
-                            VStack{
-                                Text("Given")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                                Text("25")
-                                    .font(.system(size: 23))
-                                    .frame(width: 40, height: 40)
-                                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
-                                Text("Gram")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                            }
-                            
-                            VStack{
-                                Text("Rest")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                                Text("15")
-                                    .font(.system(size: 23))
-                                    .frame(width: 40, height: 40)
-                                    .shadow(color: Color.black.opacity(0.5), radius: 5, x: 0, y: 2)
-                                Text("Gram")
-                                    .font(.system(size: 13))
-                                    .bold()
-                                    .opacity(0.7)
-                            }
-                        }
-                        Rectangle().frame(height: 1).opacity(0.5)
-                            .padding()
-                        Button(action: {
-                            
-                        }){
-                            Text("Add another product")
-                                .foregroundColor(Color.yellow)
-                            
-                        }
-                        .buttonStyle(PlainButtonStyle())
-                    }
-                    .padding()
-                    .frame(width: 360)
-                    .background {
-                        RoundedRectangle(cornerRadius: 20, style: .continuous)
-                            .fill(Color.white.opacity(1))
-                            .shadow(color: Color.gray.opacity(0.6), radius: 40) // Set the shadow color to red here
-                            .padding(.top, -10)
-                    }
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 30)
+                    simulation_tab()
+                        .padding()
+                    
                 }
                 .padding()
                 VStack{
                     Text("Food")
                         .font(.title)
                         .fontWeight(.bold)
-                        .frame(maxWidth: 330, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 30)
                     graph_food()
                 }
                 .padding()
@@ -202,13 +52,14 @@ struct animal_food_detail: View {
                     Text("Food activity")
                         .font(.title)
                         .fontWeight(.bold)
-                        .frame(maxWidth: 330, alignment: .leading)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .padding(.leading, 30)
                     graph_food()
                 }
                 .padding()
-            }
+            
         }
-        .navigationTitle("My Animals")
+        .navigationTitle("Food")
         .navigationBarItems(trailing:
                                 Button(action: {
                                 }) {
